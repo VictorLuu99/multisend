@@ -24,9 +24,10 @@
     "test": "mocha",
     "compile": "npx hardhat compile",
     "clean": "npx hardhat clean",
-    "deploy": "hardhat run --network sepolia scripts/index.js",
+    "mutisend": "hardhat run --network base scripts/index.js",
     "deploy:cyprus1": "hardhat run --network cyprus1 scripts/index.js",
-    "deploy:zulu": "hardhat run --network zulu"
+    "deploy:base": "hardhat run --network base",
+    "deploy:base_sepolia": "hardhat run --network base_sepolia"
   },
   "repository": {
     "type": "git",

@@ -29,6 +29,16 @@ module.exports = {
       accounts: [PRIVATE_KEY],
       chainId: Number(90104),
     },
+    base: {
+      accounts: [PRIVATE_KEY],
+      chainId: 8453,
+      url: "https://mainnet.base.org",
+    },
+    base_sepolia: {
+      accounts: [PRIVATE_KEY],
+      chainId: 84532,
+      url: "https://sepolia.base.org",
+    },
   },
 
 };
