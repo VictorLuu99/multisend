@@ -19,15 +19,19 @@ const SC_DEPLOYED = "0x05A100890DdBe49F1b2eDBc90a02cFFe2512e344";
       new BigNumber(amount).times(new BigNumber(10).pow(DECIMALS_NATIVE)).toFixed(0)
     );
     // Using a for loop
-    let sum = amount*users.length;
+    let sum = new BigNumber(amount).times(users.length);
 
     // 2 Send Native
+    const value = sum.times(new BigNumber(10).pow(DECIMALS_NATIVE)).toString();
     const AutoContractFactory = await ethers.getContractFactory("Auto");
     const autoAddress = await AutoContractFactory.attach(SC_DEPLOYED);
+    const gasLimit = await autoAddress.estimateGas.sendNative(users, amountFormated, {
+      value: value,
+    });
     await autoAddress.sendNative(users, amountFormated,
       {
-        value: new BigNumber(sum).times(new BigNumber(10).pow(DECIMALS_NATIVE)).toFixed(0),
-        gasLimit: 8000000
+        value: value,
+        gasLimit: gasLimit.toString(),
       }
     );
 
