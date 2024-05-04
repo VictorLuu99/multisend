@@ -27,6 +27,7 @@
     "mutisend-base": "hardhat run --network base scripts/index.js",
     "mutisend-base-sepolia": "hardhat run --network base_sepolia scripts/index.js",
     "mutisend-eth-sepolia": "hardhat run --network sepolia scripts/index.js",
+    "mutisend-zulu": "hardhat run --network zulu scripts/index.js",
     "deploy:cyprus1": "hardhat run --network cyprus1 scripts/index.js",
     "deploy:base": "hardhat run --network base",
     "deploy:base_sepolia": "hardhat run --network base_sepolia",
