@@ -7,7 +7,7 @@ contract Auto {
     address owner;
 
     constructor() {
-        owner = 0x4423B61F9B3fa309b4E2aC2408638169DcE23660;
+        owner = msg.sender;
     }
 
     function sendToken(

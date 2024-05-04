@@ -8,16 +8,16 @@ dotenv.config();
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 module.exports = {
   solidity: "0.8.0",
-  defaultNetwork: 'zulu',
+  defaultNetwork: 'sepolia',
   networks: {
     hardhat: {
       chainId: 1337,
       allowUnlimitedContractSize: true,
     },
-   
     sepolia: {
-      url: "https://ethereum-holesky-rpc.publicnode.com",
       accounts: [PRIVATE_KEY],
+      url: 'https://sepolia.infura.io/v3/4734565b7484497685b924e95be2b36e',
+      chainId: 11155111
     },
     cyprus1: {
       url: "https://rpc.cyprus1.colosseum.quaiscan.io",
